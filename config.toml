@@ -9,7 +9,7 @@ theme = "minimal"
     copyright = "Self-hosted 🐳 + 🫐🍰. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)."
     accent = "#1B55C5"
     showBorder = true
-    backgroundColor = "#171a1b"
+    backgroundColor = ""
     font = "Quicksand"
 
 [[menu.main]]
