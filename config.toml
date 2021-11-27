@@ -7,9 +7,9 @@ theme = "minimal"
     author = "Pedro Ruiz"
     description = "Loves [playing guitar](https://vivabelgrado.bandcamp.com) and [programming](https://www.github.com/pruiz-ca).\n\nEngineer growing as a software developer thanks to [42 Madrid-Telefónica](https://www.42madrid.com)."
     copyright = "Self-hosted 🐳 + 🫐🍰. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)."
-    accent = "#1B55C5"
+    accent = "#1b6ac5"
     showBorder = true
-    backgroundColor = ""
+    backgroundColor = "#030406"
     font = "Quicksand"
 
 [[menu.main]]

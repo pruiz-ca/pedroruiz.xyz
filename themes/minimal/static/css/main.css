@@ -101,7 +101,7 @@ a:hover {
 
 .navbar.navbar-default {
     border-top: var(--border-width) solid var(--accent);
-    background-color: #131415;
+    background-color: #030406;
     border-bottom: 0px solid rgb(150, 150, 150);
 }
 
