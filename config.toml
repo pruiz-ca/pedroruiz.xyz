@@ -1,0 +1,44 @@
+baseURL = '//pedroruiz.xyz'
+languageCode = 'en-us'
+title = 'Pedro Ruiz'
+theme = "minimal"
+
+[params]
+    author = "Pedro Ruiz"
+    description = "Loves [playing guitar](https://vivabelgrado.bandcamp.com) and [programming](https://www.github.com/pruiz-ca).\n\nEngineer growing as a software developer thanks to [42 Madrid-Telefónica](https://www.42madrid.com)."
+    copyright = " "
+    accent = "#1B55C5"
+	borderWidth = 10
+    showBorder = true
+    backgroundColor = ""
+    font = "Quicksand"
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/cv.pdf"
+    name = "CV"
+    weight = 9
+
+[[menu.icon]]
+    url = "https://github.com/pruiz-ca"
+    name = "fab fa-github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.instagram.com/pd.raw/"
+    name = "fab fa-instagram"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://open.spotify.com/user/h4m11lw0z5def98uih0ps1iur"
+    name = "fab fa-spotify"
+    weight = 4
+
+[[menu.icon]]
+    url = "mailto:pedrorcampillo@gmail.com"
+    name = "far fa-envelope"
+    weight = 7
