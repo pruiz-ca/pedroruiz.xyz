@@ -67,6 +67,7 @@ a:hover {
 /* Copyright message */
 
 .copyright {
+    font-size: 1.2vmin;
     margin: 8px 0;
 }
 
