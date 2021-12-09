@@ -6,12 +6,25 @@
 
         <!-- HTML Meta Tags -->
         <title>{{ .Title }}</title>
-        <meta name="description" content="Personal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+        <meta name="description" content="Personal minimal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
 
         <!-- Google / Search Engine Tags -->
         <meta itemprop="name" content="Pedro Ruiz">
-        <meta itemprop="description" content="Personal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
-        <meta itemprop="image" content="https://avatars.githubusercontent.com/u/74905890?v=4">
+        <meta itemprop="description" content="Personal minimal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+        <meta itemprop="image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfX3hM-q_YTKhBGxjv8g4Ks8Nl42wIAWAgaQ&usqp=CAU">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://pedroruiz.xyz">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Pedro Ruiz">
+        <meta property="og:description" content="Personal minimal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+        <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfX3hM-q_YTKhBGxjv8g4Ks8Nl42wIAWAgaQ&usqp=CAU">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Pedro Ruiz">
+        <meta name="twitter:description" content="Personal minimal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+        <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfX3hM-q_YTKhBGxjv8g4Ks8Nl42wIAWAgaQ&usqp=CAU">
 
         {{ if .Site.Params.favicon }}
             <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
