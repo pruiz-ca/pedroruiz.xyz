@@ -3,8 +3,16 @@
     <head>
         {{ partial "head-open" . }}
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- HTML Meta Tags -->
         <title>{{ .Title }}</title>
+        <meta name="description" content="Personal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="Pedro Ruiz">
+        <meta itemprop="description" content="Personal static website. Self-hosted using Docker and a Raspberry Pi. Updated through GitHub Actions.">
+        <meta itemprop="image" content="https://avatars.githubusercontent.com/u/74905890?v=4">
+
         {{ if .Site.Params.favicon }}
             <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
         {{ end }}
