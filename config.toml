@@ -20,7 +20,7 @@ theme = "minimal"
 [[menu.main]]
     url = "/cv.pdf"
     name = "CV"
-    weight = 9
+    weight = 7
 
 [[menu.icon]]
     url = "https://github.com/pruiz-ca"
@@ -28,16 +28,21 @@ theme = "minimal"
     weight = 2
 
 [[menu.icon]]
+    url = "https://www.linkedin.com/in/pruiz-ca/"
+    name = "fab fa-linkedin"
+    weight = 3
+
+[[menu.icon]]
     url = "https://www.instagram.com/pd.raw/"
     name = "fab fa-instagram"
-    weight = 3
+    weight = 4
 
 [[menu.icon]]
     url = "https://open.spotify.com/user/h4m11lw0z5def98uih0ps1iur"
     name = "fab fa-spotify"
-    weight = 4
+    weight = 5
 
 [[menu.icon]]
     url = "mailto:pedrorcampillo@gmail.com"
     name = "far fa-envelope"
-    weight = 7
+    weight = 6
