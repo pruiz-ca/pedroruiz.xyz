@@ -1,18 +1,13 @@
-version: '2.0'
+version: '3.0'
 services:
   web:
-    build: .
+    image: pruizca/hugo
+    container_name: personal_website
+    hostname: website
     ports:
     - "1313:1313"
     volumes:
-    - ~/pedroruiz.xyz:/site
-    hostname: website
-
-    networks:
-    - homeserver
-
-networks:
-  homeserver:
-    external:
-      name: homeserver
+    - ./:/site
+    environment:
+    - DOMAIN=${DOMAIN_NAME}
 

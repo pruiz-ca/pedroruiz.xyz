@@ -1,19 +1,13 @@
 FROM nginx:alpine as build
 
-RUN apk add --update \
-    wget
+ENV DOMAIN=localhost
 
-ARG HUGO_VERSION="0.89.4"
-RUN wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" && \
-    tar xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-    rm -r hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-    mv hugo /usr/bin
+RUN apk add --update --no-cache \
+          wget \
+          hugo
 
-COPY ./ /site
 WORKDIR /site
-RUN hugo
 
-EXPOSE 80 1313
+EXPOSE 1313
 
-CMD ["hugo"]
-CMD [ "hugo", "server", "--disableFastRender", "--buildDrafts", "--watch", "--bind", "0.0.0.0", "--baseURL=//pedroruiz.xyz", "--appendPort=false"]
+CMD hugo server --disableFastRender --buildDrafts --watch --bind 0.0.0.0 --baseURL=//$DOMAIN --appendPort=false
