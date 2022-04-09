@@ -28,38 +28,20 @@ In the host machine first clone your repo with the following command:
 
 		git clone --recurse-submodules -j8 <your-repo>
 
-Save this Dockerfile to your website folder and don't forget to update DOMAIN_NAME with your domain.
+Save this docker-compose file and as optional, add a .env file with the only variable DOMAIN_NAME='yourdomain'. If there's no .env file it will take localhost by default and you should remove the environment lines.
 
-		FROM nginx:alpine as build
-
-		RUN apk add --update \
-			wget
-
-		ARG HUGO_VERSION="0.89.4"
-		RUN wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" && \
-			tar xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-			rm -r hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-			mv hugo /usr/bin
-
-		COPY ./ /site
-		WORKDIR /site
-		RUN hugo
-
-		EXPOSE 80 1313
-
-		CMD ["hugo"]
-		CMD [ "hugo", "server", "--disableFastRender", "--buildDrafts", "--watch", "--bind", "0.0.0.0", "--baseURL=//DOMAIN_NAME", "--appendPort=false"]
-
-Save this docker-compose file with the Dockerfile and change YOUR_REPO_PATH with your website repository folder path.
-
-		version: '2.0'
+		version: '3.0'
 		services:
-		web:
-			build: .
-			ports:
-			- "1313:1313"
-			volumes:
-			- YOUR_REPO_PATH:/site
+		  web:
+		    image: pruizca/hugo
+		    container_name: personal_website
+		    hostname: website
+		    ports:
+		    - "1313:1313"
+		    volumes:
+		    - ./:/site
+		    environment:
+		    - DOMAIN=${DOMAIN_NAME}
 
 Run ```docker-compose up``` to test it, ```docker-compose up -d``` to keep it in the background if working correctly. The website should be up at localhost:1313
 
